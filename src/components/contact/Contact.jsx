@@ -4,12 +4,12 @@ import { LinkedIn, Mail, Person } from '@mui/icons-material'
 const Contact = () => {
 
   const handleClick = () => {
-    fetch('resume.pdf').then(response => {
+    fetch('Resume.pdf').then(response => {
         response.blob().then(blob => {
             const fileURL = window.URL.createObjectURL(blob);
             let alink = document.createElement('a');
             alink.href = fileURL;
-            alink.download = 'resume.pdf';
+            alink.download = 'Resume.pdf';
             alink.click();
         })
     })
